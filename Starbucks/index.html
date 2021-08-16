@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks | Landing Page</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <section class="mainsec">
+        <div class="circle"></div>
+        <header>
+            <a href=""><img src="images/logo.png" class="logo"></a>
+            <ul id="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+            <div class="menuToggle" onclick="toggles()"></div>
+        </header>
+        <div class="content">
+            <div class="textbx">
+                <h1>It's not just coffee <br>It's <span>Starbucks</span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique fugiat incidunt repudiandae ad modi alias veritatis a, facilis repellendus ex. Accusantium ipsum suscipit quasi magnam a voluptate repellat ab similique, qui sint veniam saepe labore, laborum sequi odio nisi officiis.</p>
+                <a href="">Learn More</a>
+            </div>
+            <div class="imagebx">
+                <img src="images/img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="images/thumb1.png" onclick="imgchange('images/img1.png'); circlecolor('#017143')"></li>
+            <li><img src="images/thumb2.png" onclick="imgchange('images/img2.png'); circlecolor('#eb7495')"></li>
+            <li><img src="images/thumb3.png" onclick="imgchange('images/img3.png'); circlecolor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><img src="images/facebook.png"></li>
+            <li><img src="images/twitter.png"></li>
+            <li><img src="images/instagram.png"></li>
+        </ul>
+    </section>
+    <script>
+        function imgchange(anything)
+        {
+            document.querySelector(".starbucks").src = anything;
+        }
+        function circlecolor(color)
+        {
+            var circle = document.querySelector(".circle");
+            circle.style.background = color;
+        }
+        
+        function toggles()
+        {
+            var menuToggle = document.querySelector(".menuToggle");
+            var navigation = document.getElementById("navigation");
+            menuToggle.classList.toggle("active");
+            navigation.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
